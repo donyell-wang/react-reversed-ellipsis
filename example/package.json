@@ -1,0 +1,20 @@
+{
+  "name": "react-reversed-ellipsis-example",
+  "homepage": "https://donyell-wang.github.io/react-reversed-ellipsis",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "^1.1.4",
+    "react-reversed-ellipsis": "link:.."
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
