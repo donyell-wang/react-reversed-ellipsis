@@ -1,22 +1,48 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
 import styles from './styles.css'
 
-export default class ExampleComponent extends Component {
-  static propTypes = {
-    text: PropTypes.string
-  }
+const ReverseEllipsis = ({ text, style, maxWidth, className }) => {
+  const textReversed = text.split('').reverse().map((item, idx) => (
+    item === ' '
+      ? (
+        <span
+          key={idx}
+          className={styles.textItem}
+          dangerouslySetInnerHTML={{ __html: '&nbsp;' }}
+        />
+      ) : (
+        <span
+          key={idx}
+          className={styles.textItem}
+        >
+          {item}
+        </span>
+      )
+  ))
 
-  render() {
-    const {
-      text
-    } = this.props
-
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
-  }
+  return (
+    <div
+      style={{ maxWidth: maxWidth, ...style }}
+      className={`${styles.textContainer} ${className}`}
+    >
+      {textReversed}
+    </div>
+  )
 }
+
+ReverseEllipsis.propTypes = {
+  text: PropTypes.string,
+  style: PropTypes.object,
+  maxWidth: PropTypes.number.isRequired,
+  className: PropTypes.string
+}
+
+ReverseEllipsis.defaultProps = {
+  text: '',
+  style: {},
+  className: ''
+}
+
+export default ReverseEllipsis
