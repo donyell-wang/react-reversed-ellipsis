@@ -18,9 +18,11 @@ with this lib, you can achieve effect like (still using CSS)
 
 `...the last few words`
 
+see the example at https://donyell-wang.github.io/react-reversed-ellipsis/
+
 **Shortage**
 
-This lib works well with `monospace` font or `monospace` language like Chinese, and it may look not that good in other circumstances. This is becasue `transform: scaleX(-1)` is used to do the trick.
+This lib works well with `monospace` font or `monospace` language like Chinese, and it may look not that good in other circumstances. That is becasue `transform: scaleX(-1)` is used to do the trick.
 
 
 ## Install
